@@ -1,3 +1,13 @@
+# Build Folder
 _site/
+
+# Mac Files
+.DS_Store
+_DS_Store
+
+# NPM
 node_modules/
 package-lock.json
+
+# Local Netlify folder
+.netlify
