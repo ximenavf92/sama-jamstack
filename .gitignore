@@ -11,3 +11,6 @@ package-lock.json
 
 # Local Netlify folder
 .netlify
+
+# Local VScode Settings
+.vscode
