@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json.schemastore.org/web-manifest",
+    "name": "San Antonio Manufacturers Association",
+    "short_name": "SAMA",
+    "description": "The San Antonio Manufacturers Association (SAMA) is the voice of and advocate for the manufacturing industry in the greater San Antonio metropolitan area.",
+    "scope": "/",
+    "icons": [{
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "start_url": ".",
+    "theme_color": "#212121",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "any"
+}

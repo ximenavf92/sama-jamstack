@@ -4,6 +4,7 @@ const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginPWA = require("eleventy-plugin-pwa");
 
 module.exports = function(eleventyConfig) {
 
@@ -15,6 +16,16 @@ module.exports = function(eleventyConfig) {
   // layout: post. If you don’t want to rewrite all of those values, just map
   // post to a new file like this:
   // eleventyConfig.addLayoutAlias("post", "layouts/my_new_post_layout.njk");
+
+  // Eleventy PWA Plugin https://www.npmjs.com/package/eleventy-plugin-pwa
+  eleventyConfig.addPlugin(pluginPWA, {
+    swDest: "./_site/service-worker.js",
+    globDirectory: "./_site",
+    clientsClaim: true,
+    skipWaiting: true
+  });
+  // PWA Web Manifest
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
 
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
@@ -69,6 +80,11 @@ module.exports = function(eleventyConfig) {
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("favicon-16x16.png");
+  eleventyConfig.addPassthroughCopy("favicon-32x32.png");
+  eleventyConfig.addPassthroughCopy("android-chrome-192x192.png");
+  eleventyConfig.addPassthroughCopy("android-chrome-512x512.png");
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
