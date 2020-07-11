@@ -1,16 +1,42 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}" {% endif %} lang="en">
+<html {% if section %} data-current="{{ section }}" {% endif %} lang="en" class="">
 
 {% include "components/head.njk" %}
 
 <body>
-
-	<header>
-		<em>
-			<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-		</em>
+	<header class="main-header">
+		<h1>
+			<a href="{{ '/' | url }}">
+			<span class="sr-only">{{ metadata.title }}</span>
+			<img src="/static/img/sama-logo-horizontal.svg" alt="">
+			</a>
+		</h1>
 		{% include "components/nav.njk" %}
 	</header>
+
+	{% if section == "home" %}
+	<!-- Home Header | Only show in home -->
+		<section class="home-header">
+			<h2 class="secondaryColor white-text textShadow-dark">I am Manufacturing</h2>
+            <ul class="reset-list">
+                <li><a href="#" class="button button--primary">Get Involved</a></li>
+                <li><a href="#" class="button button--reverse">Become a Member</a></li>
+            </ul>
+		</section>
+		{% include "components/nav-support.njk" %}
+	{% elif section == "page" %}
+	<!-- Interior Header | Only show if section is defined as page -->
+		<section class="interior-header">
+			<h1 class="heading-special--primary">{{ title }}</h1>
+			<img src="/static/img/interior-header-membership.jpg" alt="">
+		</section>
+	{% elif section == "contact" %}
+	<!-- Interior Header – Contact | Only show if section is defined as page -->
+		<section class="interior-header">
+			<h1 class="heading-special--primary">{{ title }}</h1>
+			<img src="/static/img/interior-header-membership.jpg" alt="">
+		</section>
+	{% endif %}
 
 	<main>
 		{{ layoutContent | safe }}
@@ -18,6 +44,7 @@
 
 	{% include "components/footer.njk" %}
 	<script>
+		
 		if ("serviceWorker" in navigator) {
 			navigator.serviceWorker
 				.register("/service-worker.js")

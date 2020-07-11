@@ -1,10 +1,13 @@
-<nav>
+<nav class="main-nav">
   {% set navPages = collections.all | eleventyNavigation %}
   <ul>
   {%- for entry in navPages %}
     <li>
-      <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
+      <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }} {% if class %} class="{{ entry.class }}" {% endif %}</a>
     </li>
   {%- endfor %}
+    <li><a href="#" target="_blank" rel="noopener">Login</a></li>
+    <li><a href="#"><span class="sr-only">Search</span><i class="fa fa-search" aria-hidden="true"></i></a></li>
+    <li><a href="/get-involved" target="_blank" rel="noopener" class="button button--primary">Get Involved</a></li>
   </ul>
 </nav>
