@@ -1,10 +1,10 @@
 ---
-title: About Us
+title: Resources
 date: 2020-07-01T00:00:00.000Z
-permalink: /about/index.html
+permalink: /resources/index.html
 eleventyNavigation:
-  key: About Us
-  order: 1
+  key: Resources
+  order: 4
 ---
 
 ## Our services
@@ -14,11 +14,6 @@ Bring to the table win-win survival strategies to ensure proactive domination. A
 ### Blue-sky thinking
 
 Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-
-<section> 
-{{ {% include "components/postlists.njk" %} 
-    {% include "components/form.njk" %} }} 
-</section>
 
 #### Management frameworks
 

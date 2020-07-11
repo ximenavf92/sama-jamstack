@@ -1,11 +1,8 @@
 ---
 layout: layouts/home.njk
-title: Home
-date: 2016-01-01T00:00:00.000Z
+title: San Antonio Manufacturers Association
+date: 2020-07-01T00:00:00.000Z
 permalink: /
-eleventyNavigation:
-  key: Home
-  order: 0
 ---
 # Welcome
 
@@ -17,4 +14,4 @@ For more info on installation and usage, view the [project repo]({{ pkg.reposito
 
 Or click the button below to deploy your own copy of this project to Netlify.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+<a href="#" class="button button--primary">This is a button</a>
