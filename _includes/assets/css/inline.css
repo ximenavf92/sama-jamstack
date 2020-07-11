@@ -466,6 +466,10 @@ a[href]:visited.button--reverse:hover,
     padding: .3em .5em .25em;
 }
 
+.main-header nav li a[href].button.button--primary:hover {
+    color: #fff;
+}
+
 /* Support Navs */
 .support-nav {
     width: 100%;
